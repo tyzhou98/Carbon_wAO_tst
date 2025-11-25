@@ -26,4 +26,4 @@ __Contact information:__ The [Computational Oceanography Lab](https://sites.udel
 
 ## Acknowledgment
 T. Zhou is supported by the NASA FINESST Program (80NSSC24K0011). Y. Li, W.‐J. Cai and Z. Ouyang are supported by the NASA Carbon Cycle Science Program (80NSSC22K0151). 
-W.‐J. Cai acknowledges the support from NSF (OPP‐1926158). P. Harmon is supported by the NSF Research Experiences for Undergraduates program (UD-NSF-REU Grant#) to conduct research in Y. Li’s lab at the University of Delaware
+W.‐J. Cai acknowledges the support from NSF (OPP‐1926158). P. Harmon is supported by the NSF Research Experiences for Undergraduates program (NSF #2447647) to conduct research in Y. Li’s lab at the University of Delaware
