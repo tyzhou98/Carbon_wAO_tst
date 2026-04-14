@@ -8,7 +8,7 @@
 %   - (a-c) UCO2 std ratio between sensitivity and baseline runs
 %   - (d-f) UCO2 RMSD normalized against std of baseline run
 %
-%             Author: Tianyu Zhou and Yun Li, UDel, 11/23/2025
+%             Author: Tianyu Zhou and Yun Li, UDel, 04/13/2026
 
 clc; clear; close all; info_params
 %======================================================
@@ -22,8 +22,8 @@ fsize = 8;
 fgx = 0.00; fgw = 0.45; fgdw = fgw-0.14;
 fgy = 0.50; fgh = 0.45; fgdh = fgh-0.12;
 % colorbar info (dim: label, colormap, range, tick)
-load(fcmap_r1r2);     cmap1=cmap(41:end-40,:);
-load(fcmap_pCO2dens); cmap2=flipud(cmap(1:end-10,:));
+load(fcmap_r1r2);     cmap1=cmap;                      % color scheme of std ratio
+load(fcmap_pCO2dens); cmap2=flipud(cmap(1:end-10,:));  % color scheme of nRMSD
 cbarinfo = {'std ratio', cmap1, 1+0.2*[-1 1], 0.85:0.1:1.15;...
            'nRMSD'     , cmap2, [0 0.45]    , 0:0.1:0.4};
 
@@ -43,13 +43,13 @@ for kr = 1:length(idd)
   if strfind(desc,'DSR')
     desc = 'no ice-related predictors';
   elseif strfind(desc,'bbp')
-    desc = 'no \itb\rm_{bp} history';
+    desc = 'no biotic uptake history';
   else
     desc = 'no wind history';
   end
 
   % mapping
-  for kp = 1:2                             % 1: std ratio; 2: nRMSD
+  for kp = 1:2
     wrk = nan(NX,NY);
     if kp==1; wrk(idw)=sens.FCO2int_std( :,idd(kr))./sens.FCO2int_std(:,id0); end
     if kp==2; wrk(idw)=sens.FCO2int_rmse(:,idd(kr))./sens.FCO2int_std(:,id0); end
